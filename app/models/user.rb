@@ -1,0 +1,29 @@
+class User < ActiveRecord::Base
+  attr_accessible :email, :name, :password, :password_confirmation
+  attr_reader :password
+
+  validates_format_of :email, :with => /\A.+@.+\Z/
+  validates_presence_of :name
+  validates_presence_of :password, :if => :require_password?
+  validates_confirmation_of :password, :if => :require_password?
+
+  after_save :erase_password
+
+  def password=(password)
+    self.password_hash = PasswordEncryptor.encrypt(password.to_s)
+    @password = password
+    @validate_password = true
+  end
+
+  private
+  def erase_password
+    @password = nil
+    @password_confirmation = nil
+    @validate_password = false
+  end
+
+  def require_password?
+    new_record? || @validate_password
+  end
+
+end
