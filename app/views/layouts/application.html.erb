@@ -7,7 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
+<h1>Hackerboard</h1>
 
+<p>
+	<%= link_to t("menu.signup"), signup_path %>
+</p>
+
+<% flash.each do |type, message| %>
+	<p class="<%= type %> message"><%= message %></p>
+<% end %>
+	
 <%= yield %>
 
 </body>
