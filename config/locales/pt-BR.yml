@@ -1,0 +1,15 @@
+pt-BR:
+  menu:
+    signup: "Quero me cadastrar"
+  
+  labels:
+    user:
+      name: "Seu nome"
+      email: "Seu e-mail"
+      password: "Sua senha"
+      password_confirmation: "Confirme sua senha"
+      
+  flash:
+    signup:
+      create:
+        notice: "Usuário cadastrado com sucesso!"
