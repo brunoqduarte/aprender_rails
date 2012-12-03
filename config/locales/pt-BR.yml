@@ -13,3 +13,17 @@ pt-BR:
     signup:
       create:
         notice: "Usuário cadastrado com sucesso!"
+        
+  form:
+    errors: "Verifique o formulário antes de continuar:"
+    
+  activerecord:
+    models:
+      user: "Usuário"
+    attributes:
+      user:
+        name: "Nome"
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirmação de senha"
+      
