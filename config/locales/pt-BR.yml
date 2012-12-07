@@ -1,6 +1,7 @@
 pt-BR:
   menu:
     signup: "Quero me cadastrar"
+    login: "Acessar minha conta"
   
   labels:
     user:
@@ -16,6 +17,8 @@ pt-BR:
         
   form:
     errors: "Verifique o formulário antes de continuar:"
+    submit:
+      login: "Acessar minha conta"
     
   activerecord:
     models:
@@ -26,4 +29,6 @@ pt-BR:
         email: "E-mail"
         password: "Senha"
         password_confirmation: "Confirmação de senha"
-      
+  
+  user:
+    greeting: "Olá, %{name}"

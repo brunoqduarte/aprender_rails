@@ -10,8 +10,17 @@
 	
 <h1>Hackerboard</h1>
 
+<%= debug session %>
+
+<% if logged_in? %>
+	<p>
+		<%= t("user.greeting", :name => current_user.name) %>
+	</p>
+<% end %>
+
 <p>
 	<%= link_to t("menu.signup"), signup_path %>
+	<%= link_to t("menu.login"), login_path %>
 </p>
 
 <% flash.each do |type, message| %>

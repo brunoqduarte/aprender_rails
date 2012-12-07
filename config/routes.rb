@@ -5,6 +5,7 @@ Hackerboard::Application.routes.draw do
   post "/signup", :to => "signup#create"
   
   get "/login", :to => "login#new"
+  post "/login", :to => "login#create"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
